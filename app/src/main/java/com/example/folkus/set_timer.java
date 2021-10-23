@@ -51,6 +51,9 @@ public class set_timer extends AppCompatActivity {
 
                 String time1 = SetTimer.getText().toString();
 
+                Intent intent = new Intent(set_timer.this,timer_page.class);
+                intent.putExtra("timeString", time1);
+                startActivity(intent);
 
 
                 if (time1.matches("")) {
@@ -69,8 +72,7 @@ public class set_timer extends AppCompatActivity {
                         if(hours < 24 & minutes < 60)
                         {
                             moveToTimerActivity();
-                            getHours(hours);
-                            getMins(minutes);
+
 
                         }
                     }
@@ -86,7 +88,7 @@ public class set_timer extends AppCompatActivity {
 
             }
         });
-        NextButton.setOnClickListener(new View.OnClickListener() {
+        BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 moveToSelectActivity();
@@ -102,14 +104,9 @@ public class set_timer extends AppCompatActivity {
     }
     private void moveToSelectActivity()
     {
-        startActivity(new Intent(this,select_course.class));
+        startActivity(new Intent(this,MainActivity.class));
     }
-    public int getHours(int h) {
-        return h;
-    }
-    public int getMins(int m) {
-        return m;
-    }
+
 
 
 

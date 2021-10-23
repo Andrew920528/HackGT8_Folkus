@@ -2,6 +2,7 @@ package com.example.folkus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 //import android.support.v7.app.AppCompatActivity;
@@ -10,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
-import com.example.folkus.set_timer;
 public class timer_page extends AppCompatActivity {
     private Chronometer chronometer;
     private long time_studied;
@@ -32,9 +32,10 @@ public class timer_page extends AppCompatActivity {
             }
         });
         chronometer.setText("00:00:00");
-
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("timeString");
         TextView textView = (TextView) findViewById(R.id.targetTime);
-        textView.setText("your target time");
+        textView.setText(str);
     }
 
     public void startChronometer(View v) {
@@ -50,6 +51,10 @@ public class timer_page extends AppCompatActivity {
             running = false;
             start_stop.setVisibility(View.GONE);
         }
+    }
+    private void moveToSetTimerActivity()
+    {
+        startActivity(new Intent(this,set_timer.class));
     }
 
 }
