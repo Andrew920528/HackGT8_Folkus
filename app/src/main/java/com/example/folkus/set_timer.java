@@ -59,8 +59,7 @@ public class set_timer extends AppCompatActivity {
                         if(hours < 24 & minutes < 60)
                         {
                             moveToTimerActivity();
-                            getHours(hours);
-                            getMins(minutes);
+
 
                         }
                     }
@@ -94,12 +93,7 @@ public class set_timer extends AppCompatActivity {
     {
         startActivity(new Intent(this,select_course.class));
     }
-    public int getHours(int h) {
-        return h;
-    }
-    public int getMins(int m) {
-        return m;
-    }
+
 
 
 
