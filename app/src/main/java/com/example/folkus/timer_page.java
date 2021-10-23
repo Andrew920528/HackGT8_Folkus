@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
-import com.example.folkus.set_timer;
 public class timer_page extends AppCompatActivity {
     private Chronometer chronometer;
     private long time_studied;
