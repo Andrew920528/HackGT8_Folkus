@@ -13,6 +13,7 @@ import android.widget.TextClock;
 import android.widget.Toast;
 
 import java.time.Clock;
+import java.util.List;
 
 public class set_timer extends AppCompatActivity {
 
@@ -25,45 +26,48 @@ public class set_timer extends AppCompatActivity {
         EditText SetTimer = (EditText) findViewById(R.id.SetTimer);
         View NextButton = (Button) findViewById(R.id.NextButton);
 
-        NextButton.setVisibility(View.INVISIBLE);
+        NextButton.setVisibility(View.VISIBLE);
 
-        String time1 = SetTimer.getText().toString();
 
-        String timeList[] = time1.split(":");
-        if (time1.matches("")) {
-            Toast.makeText(this, "You did not enter a valid Time", Toast.LENGTH_SHORT).show();
-            Log.d(time1, "is empty");
-        }
-        else
-            {
-            try
+
+
+
+
+        NextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String time1 = SetTimer.getText().toString();
+
+                String[] timeList = time1.split(":");
+
+                if (time1.matches("")) {
+
+                    System.out.print("Type Something");
+
+                }
+                else
                 {
-                    int x= Integer.parseInt(timeList[0]);
-                    int y= Integer.parseInt(timeList[1]);
-                    Log.d(time1, "is it here");
-                    if(x >= 0 & y >0 & y < 60)
+                    try
+                    {
+                        int x= Integer.parseInt(timeList[0]);
+                        int y= Integer.parseInt(timeList[1]);
+                        Log.d(time1, "is it here");
+                        if(x >= 0 & y >0 & y < 60)
                         {
-                            NextButton.setVisibility(View.VISIBLE);
-                            Log.d(time1, "is valid");
-
+                            moveToTimerActivity();
 
                         }
+                    }
+                    catch (NumberFormatException e)
+                    {
+                        System.out.print("not valid");
+                    }
                 }
-            catch (NumberFormatException e)
-                {
-                    Toast.makeText(this, "You did not enter a valid Time", Toast.LENGTH_SHORT).show();
-                }
-            }
-        if (NextButton.getVisibility() == View.VISIBLE)
-        {
 
-            NextButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    moveToTimerActivity();
-                }
-            });
-        }
+            }
+        });
+
 
 
     }
