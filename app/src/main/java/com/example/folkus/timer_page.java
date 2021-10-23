@@ -2,6 +2,7 @@ package com.example.folkus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 //import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ public class timer_page extends AppCompatActivity {
     private Chronometer chronometer;
     private long time_studied;
     private boolean running;
+    View BackButton2 = (Button) findViewById(R.id.BackButton2);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,12 @@ public class timer_page extends AppCompatActivity {
 
         TextView textView = (TextView) findViewById(R.id.targetTime);
         textView.setText("your target time");
+        BackButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToSetTimerActivity();
+            }
+        });
     }
 
     public void startChronometer(View v) {
@@ -49,6 +57,10 @@ public class timer_page extends AppCompatActivity {
             running = false;
             start_stop.setVisibility(View.GONE);
         }
+    }
+    private void moveToSetTimerActivity()
+    {
+        startActivity(new Intent(this,set_timer.class));
     }
 
 }
