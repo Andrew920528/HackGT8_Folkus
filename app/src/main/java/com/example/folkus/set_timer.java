@@ -53,7 +53,7 @@ public class set_timer extends AppCompatActivity {
                         int x= Integer.parseInt(timeList[0]);
                         int y= Integer.parseInt(timeList[1]);
                         Log.d(time1, "is it here");
-                        if(x >= 0 & y >0 & y < 60)
+                        if(x >= 0 & y >=0 & y < 60)
                         {
                             moveToTimerActivity();
 
