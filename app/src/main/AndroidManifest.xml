@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Folkus">
         <activity
+            android:name=".slect_course"
+            android:exported="false" />
+        <activity
+            android:name=".set_timer"
+            android:exported="false" />
+        <activity
+            android:name=".timer_page"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
