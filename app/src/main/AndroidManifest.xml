@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Folkus">
         <activity
-            android:name=".slect_course"
+            android:name=".select_course"
             android:exported="false" />
         <activity
             android:name=".set_timer"
