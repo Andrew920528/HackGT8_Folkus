@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
-
+import com.example.folkus.set_timer;
 public class timer_page extends AppCompatActivity {
     private Chronometer chronometer;
     private long time_studied;
@@ -24,9 +24,9 @@ public class timer_page extends AppCompatActivity {
             @Override
             public void onChronometerTick(Chronometer chronometer) {
                 long time = SystemClock.elapsedRealtime() - chronometer.getBase();
-                int h   = (int)(time /3600000);
+                int h = (int)(time /3600000);
                 int m = (int)(time - h*3600000)/60000;
-                int s= (int)(time - h*3600000- m*60000)/1000 ;
+                int s = (int)(time - h*3600000- m*60000)/1000 ;
                 String t = (h < 10 ? "0"+h: h)+":"+(m < 10 ? "0"+m: m)+":"+ (s < 10 ? "0"+s: s);
                 chronometer.setText(t);
             }
@@ -34,9 +34,9 @@ public class timer_page extends AppCompatActivity {
         chronometer.setText("00:00:00");
 
         TextView textView = (TextView) findViewById(R.id.targetTime);
-        textView.setText("text you want to display");
-
+        textView.setText("your target time");
     }
+
     public void startChronometer(View v) {
         Button start_stop = findViewById(R.id.start_stop);
         if (!running) {
