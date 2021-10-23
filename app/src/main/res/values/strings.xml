@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">folkus</string>
+    <string name="target_time">Target Time: </string>
 </resources>

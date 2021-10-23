@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.215625" />
+        <entry key="app/src/main/res/layout/activity_select_course.xml" value="0.33962264668168507" />
         <entry key="app/src/main/res/layout/activity_set_timer.xml" value="0.215625" />
+        <entry key="app/src/main/res/layout/activity_timer_page.xml" value="0.3098958333333333" />
       </map>
     </option>
   </component>
