@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.215625" />
+        <entry key="..\:/Users/raisi/StudioProjects/HackGT8_Folkus/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/raisi/StudioProjects/HackGT8_Folkus/app/src/main/res/layout/activity_select_course.xml" value="0.11639492753623189" />
+        <entry key="..\:/Users/raisi/StudioProjects/HackGT8_Folkus/app/src/main/res/layout/activity_set_timer.xml" value="0.25" />
+        <entry key="..\:/Users/raisi/StudioProjects/HackGT8_Folkus/app/src/main/res/layout/activity_timer_page.xml" value="0.1331521739130435" />
       </map>
     </option>
   </component>
