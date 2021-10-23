@@ -42,6 +42,10 @@ public class set_timer extends AppCompatActivity {
 
                 String time1 = SetTimer.getText().toString();
 
+                Intent intent = new Intent(set_timer.this,timer_page.class);
+                intent.putExtra("timeString", time1);
+                startActivity(intent);
+
 
                 if (time1.matches("")) {
 

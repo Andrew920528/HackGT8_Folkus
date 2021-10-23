@@ -15,7 +15,6 @@ public class timer_page extends AppCompatActivity {
     private Chronometer chronometer;
     private long time_studied;
     private boolean running;
-    View BackButton2 = (Button) findViewById(R.id.BackButton2);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,15 +32,10 @@ public class timer_page extends AppCompatActivity {
             }
         });
         chronometer.setText("00:00:00");
-
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("timeString");
         TextView textView = (TextView) findViewById(R.id.targetTime);
-        textView.setText("your target time");
-        BackButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                moveToSetTimerActivity();
-            }
-        });
+        textView.setText(str);
     }
 
     public void startChronometer(View v) {
