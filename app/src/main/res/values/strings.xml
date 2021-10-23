@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">folkus</string>
-    
     <string-array name="ClassList">
         <item>CS1301</item>
         <item>MATH1554</item>
         <item>ENG1102</item>
         <item>CS1331</item>
     </string-array>
+    <string name="target_time">Target Time: </string>
 </resources>
