@@ -95,7 +95,7 @@ public class set_timer extends AppCompatActivity {
     }
     private void moveToSelectActivity()
     {
-        startActivity(new Intent(this,select_course.class));
+        startActivity(new Intent(this,MainActivity.class));
     }
 
 
