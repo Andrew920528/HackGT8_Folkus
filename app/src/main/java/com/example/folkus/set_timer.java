@@ -28,6 +28,8 @@ public class set_timer extends AppCompatActivity {
 
         NextButton.setVisibility(View.VISIBLE);
 
+        View BackButton = (Button) findViewById(R.id.BackButton);
+
 
 
 
@@ -72,6 +74,12 @@ public class set_timer extends AppCompatActivity {
 
             }
         });
+        NextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToSelectrActivity();
+            }
+        });
 
 
 
@@ -79,6 +87,10 @@ public class set_timer extends AppCompatActivity {
     private void moveToTimerActivity()
     {
         startActivity(new Intent(this,timer_page.class));
+    }
+    private void moveToSelectrActivity()
+    {
+        startActivity(new Intent(this,select_course.class));
     }
 
 
