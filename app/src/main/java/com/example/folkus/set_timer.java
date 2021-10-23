@@ -39,7 +39,7 @@ public class set_timer extends AppCompatActivity {
 
                 String time1 = SetTimer.getText().toString();
 
-                String[] timeList = time1.split(":");
+
 
                 if (time1.matches("")) {
 
@@ -50,10 +50,11 @@ public class set_timer extends AppCompatActivity {
                 {
                     try
                     {
+                        String[] timeList = time1.split(":");
                         int x= Integer.parseInt(timeList[0]);
                         int y= Integer.parseInt(timeList[1]);
                         Log.d(time1, "is it here");
-                        if(x >= 0 & y >=0 & y < 60)
+                        if(x < 24 & y < 60)
                         {
                             moveToTimerActivity();
 
@@ -62,6 +63,10 @@ public class set_timer extends AppCompatActivity {
                     catch (NumberFormatException e)
                     {
                         System.out.print("not valid");
+                    }
+                    catch (RuntimeException e)
+                    {
+                        System.out.print("not valid format");
                     }
                 }
 
