@@ -2,14 +2,20 @@ package com.example.folkus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.google.android.material.navigation.NavigationBarView;
+
 public class MainActivity extends AppCompatActivity {
+
 
     private Button button;
 
@@ -33,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String state = mySpinner.getSelectedItem().toString();
+                Intent intent = new Intent(MainActivity.this, set_timer.class);
+                intent.putExtra("Class", String.valueOf(mySpinner.getSelectedItem()));
                 openSetTimerActivity();
             }
         });
@@ -44,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
 
 
 

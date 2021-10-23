@@ -1,5 +1,6 @@
 package com.example.folkus;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.widget.Chronometer;
 import android.widget.EditText;
 
 import android.widget.TextClock;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.time.Clock;
@@ -30,6 +32,13 @@ public class set_timer extends AppCompatActivity {
         NextButton.setVisibility(View.VISIBLE);
 
         View BackButton = (Button) findViewById(R.id.BackButton);
+
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("Class");
+        TextView classview = findViewById(R.id.classText);
+        classview.setText(message);
+
+
 
 
 
