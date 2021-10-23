@@ -29,6 +29,8 @@ public class set_timer extends AppCompatActivity {
 
         NextButton.setVisibility(View.VISIBLE);
 
+        View BackButton = (Button) findViewById(R.id.BackButton);
+
 
 
 
@@ -52,12 +54,14 @@ public class set_timer extends AppCompatActivity {
                     try
                     {
                         String[] timeList = time1.split(":");
-                        int x= Integer.parseInt(timeList[0]);
-                        int y= Integer.parseInt(timeList[1]);
-                        Log.d(time1, "is it here");
-                        if(x < 24 & y < 60)
+                        int hours= Integer.parseInt(timeList[0]);
+                        int minutes= Integer.parseInt(timeList[1]);
+
+                        if(hours < 24 & minutes < 60)
                         {
                             moveToTimerActivity();
+                            getHours(hours);
+                            getMins(minutes);
 
                         }
                     }
@@ -73,6 +77,12 @@ public class set_timer extends AppCompatActivity {
 
             }
         });
+        NextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToSelectActivity();
+            }
+        });
 
 
 
@@ -80,6 +90,16 @@ public class set_timer extends AppCompatActivity {
     private void moveToTimerActivity()
     {
         startActivity(new Intent(this,timer_page.class));
+    }
+    private void moveToSelectActivity()
+    {
+        startActivity(new Intent(this,select_course.class));
+    }
+    public int getHours(int h) {
+        return h;
+    }
+    public int getMins(int m) {
+        return m;
     }
 
 
