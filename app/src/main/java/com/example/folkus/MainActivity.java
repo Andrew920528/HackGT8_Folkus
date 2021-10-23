@@ -21,16 +21,19 @@ public class MainActivity extends AppCompatActivity {
 
         Spinner mySpinner = (Spinner) findViewById(R.id.dropdown);
 
+
+
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.ClassList));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
 
 
-        button = (Button) findViewById(R.id.button);
+        button = (Button) findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String state = mySpinner.getSelectedItem().toString();
                 openSetTimerActivity();
             }
         });
@@ -39,5 +42,11 @@ public class MainActivity extends AppCompatActivity {
     public void openSetTimerActivity() {
         Intent intent = new Intent(this, set_timer.class );
         startActivity(intent);
+
     }
+
+
+
+
+
 }
