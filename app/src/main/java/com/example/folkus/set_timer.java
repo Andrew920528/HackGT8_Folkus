@@ -55,10 +55,12 @@ public class set_timer extends AppCompatActivity {
                         String[] timeList = time1.split(":");
                         int hours= Integer.parseInt(timeList[0]);
                         int minutes= Integer.parseInt(timeList[1]);
-                        Log.d(time1, "is it here");
+
                         if(hours < 24 & minutes < 60)
                         {
                             moveToTimerActivity();
+                            getHours(hours);
+                            getMins(minutes);
 
                         }
                     }
@@ -91,6 +93,12 @@ public class set_timer extends AppCompatActivity {
     private void moveToSelectActivity()
     {
         startActivity(new Intent(this,select_course.class));
+    }
+    public int getHours(int h) {
+        return h;
+    }
+    public int getMins(int m) {
+        return m;
     }
 
 
