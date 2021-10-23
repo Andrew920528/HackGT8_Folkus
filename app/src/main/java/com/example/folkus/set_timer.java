@@ -43,7 +43,6 @@ public class set_timer extends AppCompatActivity {
                 String time1 = SetTimer.getText().toString();
 
 
-
                 if (time1.matches("")) {
 
                     System.out.print("Type Something");
