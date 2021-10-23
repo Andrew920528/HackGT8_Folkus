@@ -53,10 +53,10 @@ public class set_timer extends AppCompatActivity {
                     try
                     {
                         String[] timeList = time1.split(":");
-                        int x= Integer.parseInt(timeList[0]);
-                        int y= Integer.parseInt(timeList[1]);
+                        int hours= Integer.parseInt(timeList[0]);
+                        int minutes= Integer.parseInt(timeList[1]);
                         Log.d(time1, "is it here");
-                        if(x < 24 & y < 60)
+                        if(hours < 24 & minutes < 60)
                         {
                             moveToTimerActivity();
 
@@ -77,7 +77,7 @@ public class set_timer extends AppCompatActivity {
         NextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveToSelectrActivity();
+                moveToSelectActivity();
             }
         });
 
@@ -88,7 +88,7 @@ public class set_timer extends AppCompatActivity {
     {
         startActivity(new Intent(this,timer_page.class));
     }
-    private void moveToSelectrActivity()
+    private void moveToSelectActivity()
     {
         startActivity(new Intent(this,select_course.class));
     }
