@@ -76,7 +76,7 @@ public class set_timer extends AppCompatActivity {
 
             }
         });
-        NextButton.setOnClickListener(new View.OnClickListener() {
+        BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 moveToSelectActivity();
