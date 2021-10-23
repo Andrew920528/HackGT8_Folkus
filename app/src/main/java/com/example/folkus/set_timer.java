@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
@@ -31,6 +32,7 @@ public class set_timer extends AppCompatActivity {
         String timeList[] = time1.split(":");
         if (time1.matches("")) {
             Toast.makeText(this, "You did not enter a valid Time", Toast.LENGTH_SHORT).show();
+            Log.d(time1, "is empty");
         }
         else
             {
@@ -41,6 +43,8 @@ public class set_timer extends AppCompatActivity {
                     if(x >= 0 & y >0 & y < 60)
                         {
                             NextButton.setVisibility(View.VISIBLE);
+                            Log.d(time1, "is valid");
+
 
                         }
                 }
