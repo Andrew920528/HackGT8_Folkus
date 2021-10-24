@@ -34,7 +34,8 @@ public class set_timer extends AppCompatActivity {
         View BackButton = (Button) findViewById(R.id.BackButton);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra("Class");
+        Bundle packageFromCaller= intent.getBundleExtra("MyPackage");
+        String message = packageFromCaller.getString(MainActivity.EXTRA_MESSAGE);
         TextView classview = findViewById(R.id.classText);
         classview.setText(message);
 

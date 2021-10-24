@@ -57,8 +57,11 @@ public class timer_page extends AppCompatActivity {
             running = false;
             start_stop.setVisibility(View.GONE);
         }
+
+
     }
-    private void moveToSetTimerActivity()
+
+    public void moveToSetTimerActivity(View v)
     {
         startActivity(new Intent(this,set_timer.class));
     }
