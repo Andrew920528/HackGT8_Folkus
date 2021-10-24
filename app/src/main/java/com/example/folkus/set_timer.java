@@ -71,7 +71,7 @@ public class set_timer extends AppCompatActivity {
                         int hours= Integer.parseInt(timeList[0]);
                         int minutes= Integer.parseInt(timeList[1]);
 
-                        if(hours < 24 & minutes < 60)
+                        if(hours < 24 & minutes < 60 & (hours > 0 | minutes > 0))
                         {
                             moveToTimerActivity();
 
