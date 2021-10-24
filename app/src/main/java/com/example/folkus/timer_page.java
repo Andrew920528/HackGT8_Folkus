@@ -19,6 +19,7 @@ public class timer_page extends AppCompatActivity {
     private Chronometer chronometer;
     private long time_studied;
     private boolean running;
+    TextView endText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,7 @@ public class timer_page extends AppCompatActivity {
                 chronometer.setText(t);
             }
         });
+        endText=findViewById(R.id.endMessage);
         View BackButton2 = (Button) findViewById(R.id.BackButton2);
         BackButton2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +44,7 @@ public class timer_page extends AppCompatActivity {
                 moveToSetTimerActivity();
             }
         });
+
         chronometer.setText("00:00:00");
         TextView textView = (TextView) findViewById(R.id.targetTime);
         Intent intent = getIntent();
@@ -60,11 +63,17 @@ public class timer_page extends AppCompatActivity {
             chronometer.start();
             running = true;
             start_stop.setText("End Session");
+            View BackButton2 = (Button) findViewById(R.id.BackButton2);
+            BackButton2.setVisibility(View.GONE);
         } else {
             chronometer.stop();
             time_studied = SystemClock.elapsedRealtime() - chronometer.getBase();
             running = false;
+            endText.setText("Congrats! You have study for ");
             start_stop.setVisibility(View.GONE);
+            View BackButton2 = (Button) findViewById(R.id.BackButton2);
+            BackButton2.setVisibility(View.VISIBLE);
+
         }
 
 
