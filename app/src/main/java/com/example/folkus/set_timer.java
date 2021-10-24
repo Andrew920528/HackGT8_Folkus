@@ -76,6 +76,7 @@ public class set_timer extends AppCompatActivity {
                         }
                         else if(hours < 24 & minutes < 60)
                         {
+
                             moveToTimerActivity();
 
 
