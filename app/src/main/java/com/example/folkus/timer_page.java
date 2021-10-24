@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class timer_page extends AppCompatActivity {
+
     private Chronometer chronometer;
     private long time_studied;
     private boolean running;
@@ -34,6 +35,13 @@ public class timer_page extends AppCompatActivity {
                 chronometer.setText(t);
             }
         });
+        View BackButton2 = (Button) findViewById(R.id.BackButton2);
+        BackButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                moveToSetTimerActivity();
+            }
+        });
         chronometer.setText("00:00:00");
         TextView textView = (TextView) findViewById(R.id.targetTime);
         Intent intent = getIntent();
@@ -42,6 +50,7 @@ public class timer_page extends AppCompatActivity {
 
 
         textView.setText(timeString+":00");
+
     }
 
     public void startChronometer(View v) {
@@ -61,9 +70,9 @@ public class timer_page extends AppCompatActivity {
 
     }
 
-    public void moveToSetTimerActivity(View v)
+    private void moveToSetTimerActivity()
     {
-        startActivity(new Intent(this,set_timer.class));
+        startActivity(new Intent(timer_page.this,MainActivity.class));
     }
 
 }
