@@ -19,7 +19,7 @@ import java.time.Clock;
 import java.util.List;
 
 public class set_timer extends AppCompatActivity {
-
+    public static final String EXTRA_MESSAGE = "com.example.folkus.set_timer";
     public Chronometer chronometer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +50,10 @@ public class set_timer extends AppCompatActivity {
             public void onClick(View v) {
 
                 String time1 = SetTimer.getText().toString();
-
-                Intent intent = new Intent(set_timer.this,timer_page.class);
-                intent.putExtra("timeString", time1);
+                Intent intent = new Intent(getApplicationContext(),timer_page.class);
+                Bundle bundle=new Bundle();
+                bundle.putString(EXTRA_MESSAGE,time1);
+                intent.putExtra("MyPackage", bundle);
                 startActivity(intent);
 
 
