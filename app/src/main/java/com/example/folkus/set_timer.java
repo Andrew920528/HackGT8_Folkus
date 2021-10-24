@@ -72,7 +72,7 @@ public class set_timer extends AppCompatActivity {
                 startActivity(intent);
 
 
-                if (time1.matches("")) {
+                if (time1.matches("") || time1 == null) {
 
                     System.out.print("Type Something");
 
@@ -85,8 +85,12 @@ public class set_timer extends AppCompatActivity {
                         int hours= Integer.parseInt(timeList[0]);
                         int minutes= Integer.parseInt(timeList[1]);
 
-                        if(hours < 24 & minutes < 60)
+                        if((hours == 0 & minutes == 0)){
+                            System.out.print("not valid");
+                        }
+                        else if(hours < 24 & minutes < 60)
                         {
+
                             moveToTimerActivity();
 
 

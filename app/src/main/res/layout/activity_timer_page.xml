@@ -22,6 +22,14 @@
         android:text="00:00:00"
         android:textAlignment="center" />
 
+    <TextView
+        android:id="@+id/endMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
     <Chronometer
         android:id="@+id/chronometer"
         android:layout_width="wrap_content"
@@ -41,8 +49,7 @@
         android:id="@+id/BackButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go Back"
-        />
+        android:text="Go Back" />
 
 
 </LinearLayout>
