@@ -69,7 +69,7 @@ public class timer_page extends AppCompatActivity {
             chronometer.stop();
             time_studied = SystemClock.elapsedRealtime() - chronometer.getBase();
             running = false;
-            endText.setText("Congrats! You have study for ");
+            endText.setText("Congrats! You have studied for ");
             start_stop.setVisibility(View.GONE);
             View BackButton2 = (Button) findViewById(R.id.BackButton2);
             BackButton2.setVisibility(View.VISIBLE);
