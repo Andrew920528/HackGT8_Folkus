@@ -38,6 +38,20 @@ public class set_timer extends AppCompatActivity {
         String message = packageFromCaller.getString(MainActivity.EXTRA_MESSAGE);
         TextView classview = findViewById(R.id.classText);
         classview.setText(message);
+        TextView suggestedTime = findViewById(R.id.suggestedTime);
+        switch(message) {
+            case "CS1301": suggestedTime.setText("Suggested time: 01:12:00");
+                break;
+            case "MATH1554": suggestedTime.setText("Suggested time: 01:36:00");
+                break;
+            case "ENGL1102": suggestedTime.setText("Suggested time: 01:32:00");
+                break;
+            case "CS1331": suggestedTime.setText("Suggested time: 01:20:00");
+                break;
+        }
+
+
+
 
 
 
